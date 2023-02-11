@@ -9,14 +9,14 @@
 ros::NodeHandle  nh;
 
 void messageCb( const std_msgs::Empty& toggle_msg){
-  if (digitalRead(2 == HIGH){
-    delay(2000);
+  if (digitalRead(2) == HIGH){
+    delay(2);
     digitalWrite(2,0);
   }
   else {
     digitalWrite(2,1);
   }
-  digitalWrite(2, HIGH-digitalRead(2));   // blink the led
+  //digitalWrite(2, HIGH-digitalRead(2));   // blink the led
 }
 
 ros::Subscriber<std_msgs::Empty> sub("toggle_us", &messageCb );
